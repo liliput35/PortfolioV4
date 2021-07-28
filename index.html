@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stlye.css" />
+    <title>Payao Port</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="container">
+        <label class="logo">Lorenz Ciocon</label>
+
+        <img src="menu.png" alt="menu" class="menu" id="mobile-cta" />
+
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li class="contactmobile"><a href="#contactinfo">Contact</a></li>
+            <li id="exit">Exit</li>
+          </ul>
+        </nav>
+        <ul class="contact1">
+          <li><a href="#contactinfo">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <h1>Hi, I'm Lorenz Ciocon.</h1>
+        <p>I'm 16-years-old</p>
+      </div>
+    </section>
+
+    <div class="about" id="about">
+      <div class="container">
+        <h1>Get to know me.</h1>
+
+        <div class="row">
+          <div class="col">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita
+            repudiandae blanditiis sint fuga quidem asperiores facere
+            necessitatibus? Vitae culpa aut praesentium, iure beatae atque,
+            fugit expedita consequatur sequi animi rem.
+          </div>
+          <div class="col">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita
+            repudiandae blanditiis sint fuga quidem asperiores facere
+            necessitatibus? Vitae culpa aut praesentium, iure beatae atque,
+            fugit expedita consequatur sequi animi rem.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills" id="skills">
+      <div class="container">
+        <h1>My Skills</h1>
+        <div class="skillwrap">
+          <div class="skillbox">
+            <h3>Skill</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              dolore assumenda enim minima molestias illo.
+            </p>
+          </div>
+          <div class="skillbox">
+            <h3>Skill</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              dolore assumenda enim minima molestias illo.
+            </p>
+          </div>
+          <div class="skillbox">
+            <h3>Skill</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              dolore assumenda enim minima molestias illo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="port" id="projects">
+      <div class="container">
+        <h1>My Works</h1>
+        <div class="grid">
+          <div class="box">
+            <a href="https://liliput35.github.io/portfolioV1/">
+              <img src="img/Featured.png" alt="" />
+              <h3>Full Portfolio Website</h3>
+              <p>
+                Full Portfolio Website with multiple pages built using HTML,
+                CSS, and Javascript.
+              </p>
+            </a>
+          </div>
+
+
+          <div class="box">
+            <a href="https://liliput35.github.io/dodasfarmV2/" target="blank">
+              <img src="img/dfarm1.png" alt="" />
+
+              <h3>Farmhouse Brochure Website</h3>
+              <p>
+                Farmhouse Brochure Website built using HTML, CSS, and
+                Javascript.
+              </p>
+            </a>
+          </div>
+
+
+          <div class="box">
+            <a href="https://liliput35.github.io/project-portfolio/" target="blank">
+              <img src="img/portv2.png" alt="" />
+
+              <h3>Portfolio Website</h3>
+              <p>Portfolio Website built using HTML, CSS.</p>
+            </a>
+          </div>
+
+
+          <div class="box">
+            <a href="https://liliput35.github.io/philips/" target="blank">
+              <img src="img/philips.png" alt="" />
+
+              <h3>Product Showcase Website</h3>
+              <p>Product Showcase Website built using HTML, CSS.</p>
+            </a>
+          </div>
+
+
+          <div class="box">
+            <a href="https://liliput35.github.io/portfoliov3/" target="blank">
+              <img src="img/portv3.png" alt="" />
+
+              <h3>Portfolio Website</h3>
+              <p>
+                Portfolio Website with animations built using HTML, CSS, and
+                Javascript.
+              </p>
+            </a>
+          </div>
+
+
+          <div class="box">
+            <a href="https://liliput35.github.io/Enzos/" target="blank">
+              <img src="img/enzos.png" alt="" />
+
+              <h3>Brochure Website</h3>
+              <p>Brochure Website built using HTML, CSS.</p>
+            </a>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="contact" id="contactinfo">
+      <div class="container">
+        <ul>
+          <li>
+            <a
+              href="https://web.facebook.com/Ensssso?_rdc=1&_rdr"
+              target="blank"
+              ><img src="img/fb.png" alt="fb"
+            /></a>
+          </li>
+          <li>
+            <a href="https://github.com/liliput35" target="blank"
+              ><img src="img/github.png" alt="github"
+            /></a>
+          </li>
+          <li>
+            <a href="mailto:nicolasciocon@gmail.com"
+              ><img src="img/mail.png" alt="email"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const mobileBtn = document.getElementById("mobile-cta");
+      nav = document.querySelector("nav");
+      mobileBtnExit = document.getElementById("exit");
+      mobileBtn1 = document.getElementById("about");
+
+      mobileBtn.addEventListener("click", () => {
+        nav.classList.add("menu-btn");
+        mobileBtn1.classList.add("aboutm");
+      });
+
+      mobileBtnExit.addEventListener("click", () => {
+        nav.classList.remove("menu-btn");
+        mobileBtn1.classList.remove("aboutm");
+      });
+    </script>
+  </body>
+</html>

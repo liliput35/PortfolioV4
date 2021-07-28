@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #e3e4a6;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.navbar {
+    padding-top: .5em;
+}
+
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    padding-top: 3px;
+}
+
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    margin: 0 1em;
+    border: none;
+padding: none;
+}
+
+nav ul li a {
+    font-size: 1em;
+    position: relative;
+    padding: 0 5px;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background: black;
+    bottom: -5px;
+    left: 0;
+    transition: .5s;
+}
+
+nav ul a:hover::after {
+    width: 100%;
+}
+
+ul li {
+    list-style: none;
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 3px 5px;
+}
+
+
+.logo {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+
+section .container{
+    display: grid;
+    place-content: center;
+    text-align: center;
+    height: 80vh;
+}
+
+section h1 {
+    margin: 0 1em 1em 1em;
+    font-size: 2.4em;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+    position: relative;
+}
+
+section p {
+    font-size: 1.3em;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s forwards 5s;
+}
+
+section h1::before, section h1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+section h1::before {
+    background: #e3e4a6;
+    animation: typewriter 4s steps(22) 1s forwards;
+}
+
+section h1::after {
+    width: .1em;
+    background: black;
+    animation: typewriter 4s steps(22) 1s forwards, blink 750ms steps(24)infinite;
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu {
+    display: none;
+}
+
+nav ul .contactmobile {
+    display: none;
+}
+
+.menu-btn {
+    display: block;
+}
+
+#exit {
+    display: none;
+}
+
+.about {
+    height: 50vh;
+    padding-top: 10vh;
+}
+
+.about h1 {
+    margin-bottom: 1em;
+}
+
+.about .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills {
+    height: 50vh;
+    padding-top: 10vh;
+}
+
+.skills h1 {
+    margin-bottom: 2em;
+
+}
+
+.skillwrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    text-align: center;
+}
+
+.box img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    border-bottom: solid 1px black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 2em;
+}
+
+.box {
+    border: solid 1px black;
+    border-radius: 10px;
+    transition: transform .5s;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+.box h3, .box p {
+    margin: 5px;
+}
+
+.port {
+    padding-bottom: 1em;
+    height: 100vh;
+}
+
+.contact ul li {
+    border: none;
+    display: inline-block;
+    margin: 0 1em;
+}
+
+.contact ul li img {
+    height: 20px;
+}
+
+.contact ul {
+    text-align: center;
+}
+
+.contact {
+    padding: 2em 0;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .menu {
+        width: 30px;
+        cursor: pointer;
+        float: right;
+        margin-right: 1em;
+        display: block;
+    }
+
+    #exit {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar .container {
+        display: unset;
+    }
+
+    nav {
+        height: 30vh;
+        text-align: center;
+    }
+    
+
+    nav ul li {
+        display: block;
+        margin-top: 2em;
+    }
+
+    nav ul .contactmobile {
+        display: block;
+    }
+       
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+     .logo {
+        margin-left: 1em;
+    }
+
+    .contact1 {
+        display: none;
+    }
+
+    nav {
+        display: none;
+        animation: fadeInUp .5s forwards;
+        transform: translateY(-3rem);
+    }
+
+    section h1::before, section h1::after {
+        display: none;
+    }
+
+    section h1 {
+        animation: fadeInUp 2s forwards;
+        transform: translateY(-3rem);
+        opacity: 0;
+    }
+
+    section p {
+        animation: fadeInUp 2s forwards 1s;
+
+    }
+
+    .about .row {
+        flex-direction: column;
+    }
+
+    .about .col {
+        margin-bottom: 1em;
+    }
+
+    .skillwrap {
+        grid-template-columns: unset;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1em;
+        text-align: justify;
+    }
+
+   
+
+    .skills h1 {
+        margin-bottom: .5em;
+    }
+
+    .skills {
+        padding-bottom: 1em;
+    }
+
+    .grid {
+        grid-template-columns: unset;
+    }
+
+    .port {
+        margin-bottom: 1em;
+        height: max-content;
+        padding-top: 15vh;
+    }
+}
